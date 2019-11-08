@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	
+	<link rel="stylesheet" href="~/dentista/css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="~/dentista/css/animate.css">
+	<link rel="stylesheet" href="~/dentista/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="~/dentista/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="~/dentista/css/magnific-popup.css">
+	<link rel="stylesheet" href="~/dentista/css/aos.css">
+	<link rel="stylesheet" href="~/dentista/css/ionicons.min.css">
+	<link rel="stylesheet" href="~/dentista/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="~/dentista/css/jquery.timepicker.css">
+	<link rel="stylesheet" href="~/dentista/css/flaticon.css">
+	<link rel="stylesheet" href="~/dentista/css/icomoon.css">
+	<link rel="stylesheet" href="~/dentista/css/style.css">
+
+
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
+</head>
+	
+<body>
+	<div class="py-md-5 py-4 border-bottom">
+		<div class="container">
+			<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
+				<div class="col-md-4 order-md-2 mb-2 mb-md-0 align-items-center text-center">
+					<a class="navbar-brand" href="~/Home/Index">Gummy<span>Dental Clinic</span></a>
+				</div>
+				<div class="col-md-4 order-md-1 d-flex topper mb-md-0 mb-2 align-items-center text-md-right">
+					<div class="icon d-flex justify-content-center align-items-center order-md-last">
+						<span class="icon-map"></span>
+					</div>
+					<div class="pr-md-4 pl-md-0 pl-3 text">
+						<p class="con"><span>Free Consultation</span> <span>(234) 456-78910</span></p>
+						<p class="con">12345 NW 21st Street, Suite 721 Miami, FL 33016</p>
+					</div>
+				</div>
+				<div class="col-md-4 order-md-3 d-flex topper mb-md-0 align-items-center">
+					<div class="icon d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+					<div class="text pl-3 pl-md-3">
+						<p class="hr"><span>Open Hours</span></p>
+						<p class="time"><span>Mon - Fri:</span> <span>7:00am - 2:00pm</span> Sat & Sun: Closed</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!----Log in form----->
+	<ul class="nav navbar-nav navbar-right">
+		<li><a data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> login</a></li>
+	</ul>
+	<div id="loginModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"> &times;</button>
+					<h4>Login</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-inline">
+						<div class="form-group">
+							<label class="sr-only" for="email">Email</label><input type="text" class="form-control input-sm" placeholder="Email" id="email" name="email">
+						</div>
+						<div class="form-group">
+
+							<label class="sr-only" for="password">Password</label>
+							<input type="password" class="form-control input-sm" placeholder="Password" id="password" name="password">
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> Remember me
+							</label>
+						</div>
+
+						<button type="submit" class="btn btn-info btn-xs">Sign in</button>
+						<button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Cancel</button>
+					</form>
+				</div>
+				
+				<div>
+					<p>Not a user yet! Sign up now:</p>
+					<button type="submit" class="btn btn-info btn-xs" href="~/Home/Register">Sign up</button>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!----Nav Bar----->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+		<div class="container d-flex align-items-center">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav m-auto">
+					<li class="nav-item active"><a href="/Home/Index" class="nav-link pl-0">Home</a></li>
+					<li class="nav-item"><a href="/Home/Blog" class="nav-link">Blog</a></li>
+					<li class="nav-item"><a href="/dentista/doctor.html" class="nav-link">Doctor</a></li>
+					<li class="nav-item"><a href="/dentista/department.html" class="nav-link">Treatments</a></li>
+					<li class="nav-item"><a href="/Home/Pricing" class="nav-link">Pricing</a></li>
+					<li class="nav-item"><a href="/Home/Appointments" class="nav-link">Appointments</a></li>
+					<li class="nav-item"><a href="/Home/Contact" class="nav-link">Contact</a></li>
+					<li class="nav-item"><a href="/Home/About" class="nav-link">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- END nav -->
+	<!-- Body -->
+	<div>
+		@RenderBody()
+
+	</div>
+	<!-- END body -->
+	<!--	footer    -->
+	<footer class="ftco-footer ftco-bg-dark ftco-section">
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-5">
+						<h2 class="ftco-heading-2 logo">Gummy</h2>
+                        <p>Cu vim verear deleniti, duo assum dictas ad. Eam an agam audire, liber decore utinam id sea, mea habemus repudiare ea. Ei melius deserunt sit. Eos deleniti legendos cotidieque id, sed et eligendi instructior.</p>
+					</div>
+					<div class="ftco-footer-widget mb-5">
+						<h2 class="ftco-heading-2">Have a Questions?</h2>
+						<div class="block-23 mb-3">
+							<ul>
+								<li><span class="icon icon-map-marker"></span><span class="text">12345 NW 21st St. Miami, Florida, USA</span></li>
+								<li><a href="#"><span class="icon icon-phone"></span><span class="text">(234) 456-78910</span></a></li>
+								<li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@gummy.com</span></a></li>
+							</ul>
+						</div>
+
+						<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+							<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-5 ml-md-4">
+						<h2 class="ftco-heading-2">Links</h2>
+						<ul class="list-unstyled">
+							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
+							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Services</a></li>
+							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Deparments</a></li>
+							<li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+						</ul>
+					</div>
+					<div class="ftco-footer-widget mb-5 ml-md-4">
+						<h2 class="ftco-heading-2">Services</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Dental Implants</a></li>
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Cosmetic Dentistry</a></li>
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Dental Care</a></li>
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Teeth Whitening</a></li>
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Dental Calculus</a></li>
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Periondontics</a></li>
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Clip & Braces</a></li>
+                            <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Root Canal</a></li>
+                        </ul>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-5">
+						<h2 class="ftco-heading-2">Recent Blog</h2>
+						<div class="block-21 mb-4 d-flex">
+							<a class="blog-img mr-4" style="background-image: url(../../dentista/images/image_1.jpg);"></a>
+							<div class="text">
+								<h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+								<div class="meta">
+									<div><a href="#"><span class="icon-calendar"></span> Sept. 20, 2019</a></div>
+									<div><a href="#"><span class="icon-person"></span> Admin</a></div>
+									<div><a href="#"><span class="icon-chat"></span> 19</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="block-21 mb-5 d-flex">
+							<a class="blog-img mr-4" style="background-image: url(../../dentista/images/image_2.jpg);"></a>
+							<div class="text">
+								<h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+								<div class="meta">
+									<div><a href="#"><span class="icon-calendar"></span> Sept. 20, 2019</a></div>
+									<div><a href="#"><span class="icon-person"></span> Admin</a></div>
+									<div><a href="#"><span class="icon-chat"></span> 19</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-5">
+						<h2 class="ftco-heading-2">Opening Hours</h2>
+						<h3 class="open-hours pl-4"><span class="ion-ios-time mr-3"></span>We are open 24/7</h3>
+					</div>
+					<div class="ftco-footer-widget mb-5">
+						<h2 class="ftco-heading-2">Subscribe Us!</h2>
+						<form action="#" class="subscribe-form">
+							<div class="form-group">
+								<input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
+								<input type="submit" value="Subscribe" class="form-control submit px-3">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+	</footer>
+	<!-- END footer -->
+
+
+
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
+	@RenderSection("scripts", required: false)
+
+
+	<!-- js scripts links -->
+
+	<script src="~/dentista/js/jquery.min.js"></script>
+	<script src="~/dentista/js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="~/dentista/js/popper.min.js"></script>
+	<script src="~/dentista/js/bootstrap.min.js"></script>
+	<script src="~/dentista/js/jquery.easing.1.3.js"></script>
+	<script src="~/dentista/js/jquery.waypoints.min.js"></script>
+	<script src="~/dentista/js/jquery.stellar.min.js"></script>
+	<script src="~/dentista/js/owl.carousel.min.js"></script>
+	<script src="~/dentista/js/jquery.magnific-popup.min.js"></script>
+	<script src="~/dentista/js/aos.js"></script>
+	<script src="~/dentista/js/jquery.animateNumber.min.js"></script>
+	<script src="~/dentista/js/bootstrap-datepicker.js"></script>
+	<script src="~/dentista/js/jquery.timepicker.min.js"></script>
+	<script src="~/dentista/js/scrollax.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+	<script src="~/dentista/js/google-map.js"></script>
+	<script src="~/dentista/js/main.js"></script>
+
+
+</body>
+</html>
